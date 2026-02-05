@@ -1,6 +1,11 @@
 // src/config/env.js
 const path = require("path");
-require("dotenv").config({ path: path.join(process.cwd(), ".env") });
+
+// env.js is in: attendance-api/src/config/env.js
+// project root .env is in: attendance-api/.env
+require("dotenv").config({
+  path: path.join(__dirname, "../../../.env"),
+});
 
 const env = {
   PORT: process.env.PORT || 5050,
